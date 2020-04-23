@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title> literal array 방식을 이용한 배열선언 </title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+        
+        <script>
+        	// * 배열 선언 방법
+       		// 1. literal array
+        	// ① var array-name = {item, item, ...};
+        	// ② var arr = []; arr[0] = 'item';
+        	// 2. new 연산자에 의한 Array 내장 객체 생성
+        	// > 가독성, 실행속도 등이 더 좋은 literal array 생성방법을 권장
+        	// ① variable-name = new Array(item1, item2, item3, ...);
+        	// ② var arr = new Array(); arr[0] = 'a';
+        	
+        	var arr = ["Bus", 512, "taxi"]; // 여러 타입의 객체를 담을 수 있다
+        	document.write("typeof arr =",typeof arr, "<br/>");
+        	
+        	for(var i = 0; i < arr.length; i++)
+        	{
+        		document.write(i, ",", typeof arr[i],",",arr[i], "<br/>");	
+        	}
+        	arr[4] = 10000;
+        	document.write("arr.length= ", arr.length, "<br/>");
+        	console.log(arr);
+        	
+        </script>
+    </head>
+    <body>
+	       
+    </body>
+</html>
