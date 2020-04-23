@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title> Math 내장객체 </title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+        
+        <script>
+        	function getRandom(min,max) { // 랜덤 함수를 만드는 법
+				return Math.floor(Math.random()*(max-min+1)+min);
+			}
+        	document.write("Math 객체의 속성 E		:", Math.E + "<br/>"); // Euler's Number(2.718): 자연대수
+        	document.write("Math 객체의 속성 LN10	:", Math.LN10 + "<br/>"); // 자연로그 (밑수 10)
+        	document.write("Math 객체의 속성 PI		:", Math.PI + "<br/>"); // 파이 상수
+        	document.write("sin(PI/2)			:", Math.sin(Math.PI/2), "<br/>"); // 사인 값을 반환
+        	document.write("acos(0)				:", Math.acos(0), "<br/>"); // 아크 삼각함수 값 반환
+        	document.write("ceil(1.23)			:", Math.ceil(1.23), "<br/>");//무조건 올림한 수를 반환
+        	document.write("floor(1.98)			:", Math.floor(1.98), "<br/>"); // 무조건 버림한 수를 반환
+        	
+        	// 1~6사이의 주사위 난수 구하기
+        	document.write("주사위 난수				:", getRandom(1,6), "<br/>"); 
+        </script>
+    </head>
+    <body>
+	       
+    </body>
+</html>

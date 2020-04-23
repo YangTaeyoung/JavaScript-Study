@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title> Date 내장객체 </title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+        
+        <script>
+        	var today = new Date(); // 기본값이 오늘임
+        	document.write("오늘의 날짜: ", (today.getMonth()+1), "월 ", today.getDate(),"일", "<br/>");
+        	document.write("지금 시간: ", today.getHours(), "시 ", today.getMinutes(), "분 ", today.getSeconds(), "초 <br/>");
+        	
+        	function checkDate() {
+				var p = document.getElementById("pdate").value;
+				var pdate = new Date(p)
+				var diff = today.getTime() - pdate.getTime(); // getTime(): 1970년 1월 1일 이후의 시간을 1000분의 1초(밀리초)단위로 출력 또는 설정
+				var days = Math.floor(diff/(1000*60*60*24));
+				console.log(days);
+				alert("구입 후 " + days + "일 되었습니다.");
+			}
+        </script>
+    </head>
+    <body>
+    	<hr/>
+		구입 일: <input type="date" id="pdate">
+		<button onclick="checkDate()">검사</button> 
+    </body>
+</html>

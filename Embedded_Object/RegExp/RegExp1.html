@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title>  </title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+        
+        <script>
+        	var str="100, 1000 or 10000?";
+        	var patt1=/\d{3,4}/g;
+        	document.write(str.match(patt1), "<br/>");
+        	
+        	var str = "Mr blue has a blue house and a blue car";
+        	var res1 = str.replace(/blue/g, "red");
+        	document.write(res1,"<br/>");
+        	
+        	var patt2 = /blue/g;
+        	var res2 = patt2.exec(str); // str에 blue가 있으면 blue를 출력, 없으면 null
+        	document.write(res2,"<br/>");
+        </script>
+    </head>
+    <body>
+	       
+    </body>
+</html>

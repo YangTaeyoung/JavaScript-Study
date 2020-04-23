@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title>	String 내장객체 </title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+        
+        <script>
+        	var nst = String(123);
+        	document.write(nst,"의 자료형:", typeof nst, "<br/>");
+        	var str1 = "javaScript";
+        	document.write(str1.charAt(3), ", ", str1.indexOf("v"), ", ", str1.lastIndexOf("a"), "<br/>");
+        	document.write(str1.substr(2,4), ", ", str1.substring(2, 4), "<br/>")
+        	
+        	var str2 = new String("How are you doing today?");
+        	document.write(str2.split(" "), "<br/>"); // 지정한 문자열을 파라미터 기준으로 잘라서 Array로 반환
+        	document.write(str2.replace("doing", ""), "<br/>"); 
+        	document.write(str2.toUpperCase(), "<br/>");
+        	
+        	
+        </script>
+    </head>
+    <body>
+	       
+    </body>
+</html>
