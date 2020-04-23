@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title> 객체 생성 </title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+        
+        <script>
+        	// 방법1: new Object()를 사용하여 생성하기
+        	//    >  단일 객체 생성 (type가 아니다), 설계도 없는 기계
+        	var person = new Object();
+        	{
+        		person.name = "홍길동";
+        		person.age = 40;
+        		person.eyeColor= "blue";
+        		person.getEyeColor = function() // 내부에 함수도 생성할 수 있다.
+        		{
+        			return this.eyeColor;
+        		};
+        	}
+        	person.age = 20;
+        	document.write(person.name, "/", person.age,"<br/")
+        	document.write(person.getEyeColor());
+        	console.log(person);
+        </script>
+    </head>
+    <body>
+	       
+    </body>
+</html>
