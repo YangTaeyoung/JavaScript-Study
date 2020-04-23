@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title> 프로토 타입 사용 안함 </title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+        
+        <script>
+        	function Point(xpos, ypos) {
+				this.x = xpos;
+				this.y = ypos;
+			}
+        	
+        	var p1 = new Point(10,20);
+        	p1.getDistance = function (){
+        		return Math.sqrt(this.x * this.x + this.y * this.y);
+        	}
+        	
+        	var p2 = new Point(10,30);
+        	
+        	document.write("P1=" + p1.getDistance() + "<br/>");
+        	document.write("P2=" + p2.getDistance() + "<br/>"); // error
+        </script>
+    </head>
+    <body>
+	       
+    </body>
+</html>

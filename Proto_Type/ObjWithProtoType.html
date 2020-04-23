@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title> 프로토 타입 사용 시 </title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+        
+        <script>
+	     	function Point(xpos, ypos) {
+				this.x = xpos;
+				this.y = ypos;
+			}
+	    	
+	    	var p1 = new Point(10,20);
+	    	Point.prototype.getDistance = function (){  // 클래스의 함수 지정같은 느낌. JSP의 모든 객체들에 존재한다. 현재는 Point로 만들어진 모든 객체들에 존재함.
+	    		return Math.sqrt(this.x * this.x + this.y * this.y);
+	    	}
+	    	
+	    	var p2 = new Point(10,30);
+	    	
+	    	document.write("P1=" + p1.getDistance() + "<br/>");
+	    	document.write("P2=" + p2.getDistance() + "<br/>");
+        </script>
+    </head>
+    <body>
+	       
+    </body>
+</html>
