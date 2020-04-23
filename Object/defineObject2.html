@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title> 객체 생성 </title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+        
+        <script>
+        	// 방법 2: Object Constructor을 사용하여 생성하기.
+        	//    > 동일한 Object Type로 여러개의 객체 생성 가능
+        	//    > 예약어 function으로 type를 정의하고, new 연산자로 객체를 생성함.
+        	function getEyeColor() {
+        		return this.eyeColor;
+			}
+        	function Person(name, age, eyeColor) {
+				this.name = name;
+				this.age = age;
+				this.eyeColor = eyeColor;
+				this.getEyeColor = getEyeColor; // 외부 함수 선언과 참조
+			}
+        	
+        	var people1 = new Person("홍길동", 40, "blue");
+        	people1.age = 20;
+        	document.write(people1.name, "/", people1.age,"<br/");
+        	document.write(people1.getEyeColor());
+        	var people2 = new Person("슈퍼맨", 30, "red");
+
+        	console.log(people1);
+        	console.log(people2);
+        	
+        </script>
+    </head>
+    <body>
+	       
+    </body>
+</html>
