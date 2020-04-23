@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title> for/in 문 </title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+        
+        <script>
+        
+        // * for/in문
+        // > 객체의 속성변수가 없을 때까지 object의 멤버를 반복하여 탐색함.
+        // > Array에 대해서도 사용할 수 있음.
+        // > 속성 이름도 같이 출력됨.
+        // > 객체는 배열 형태로 저장되는구나.
+        
+        /*
+        	기본 구조
+        	for(속성변수 in 객체)
+        	{
+        		실행될 코드 블록
+        	}
+        */
+        	var person = {
+        		name: "홍길동",
+        		age: 20,
+        		eyeColor: "blue",
+        		getEyeColor: function(){return this.eyeColor;}        		
+        	};
+        
+        	for(var vname in person)
+        	{
+        		document.write(vname," : ", person[vname],"<br/>");
+        	}
+        </script>
+    </head>
+    <body>
+	       
+    </body>
+</html>
