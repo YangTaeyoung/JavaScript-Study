@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title>변수의 범위</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+    </head>
+    <script>
+        var a = 2;
+        b = 7;
+        function add()
+        {
+            var a =4;
+            c = 6; // 전역변수
+            document.write("a+b+c의 값은: " + (a+b+c)+"이다");
+        }
+        add();
+        document.write("a+b+c의 값은: " + (a+b+c)+"이다");
+    </script>
+    <body>
+	       
+    </body>
+</html>
