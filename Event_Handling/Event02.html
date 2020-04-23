@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title></title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+        <script type="text/javascript">
+        	function showMsg(str) {
+				alert("지금은 " + str + "이벤트가 실행되었습니다.");
+			}
+        </script>
+    </head>
+    <body onload="showMsg('onload')" onunload="showMsg('onunload')" onresize="showMsg('onresize')">
+    <!-- onload: 페이지 로딩시, onunload: 페이지 이동, 닫기시, onresize: 창 크기 조절시 -->
+    	
+	    <p><a href="#" onmouseover="showMsg('mouseover')"> mouseover 이벤트</a></p> <!-- 마우스를 해당 요소에 올릴 시 -->   
+	    <div onmouseout="showMsg('mouseout')"> mouseout 이벤트</div> <!-- 해당 요소에서 마우스가 벗어날 시 -->
+	    <p><button onclick="showMsg('click')">click 이벤트</button></p> <!-- 해당 요소 클릭 시 -->
+	    <p><a href="#" onmousedown="showMsg('mousedown')">mousedown 이벤트</a></p> <!-- 해당요소를 마우스로 누를 시. -->  
+    </body>
+</html>

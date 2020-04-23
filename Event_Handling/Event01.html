@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title></title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+        <script>
+        	function aaa(str)
+        	{
+        		alert("지금은" + str + "이벤트가 실행되었습니다.");
+        	}
+        </script>
+    </head>
+    <body>
+		<p><input type="text" value="keydown" onkeydown="aaa('keydown')"></p>
+    	<p><input type="text" value="keypress" onkeypress="aaa('keypress')"></p>
+    	<p><input type="text" value="keyup" onkeyup="aaa('keyup')" onblur="aaa('blur')"></p><!-- blur: 지정한 요소에서 포커스가 다른 곳으로 갔을 때 발생 -->
+    	
+    	<select name="select" onchange="aaa('change')"> <!-- 선택한 것을 바꾸었을 때 발생 -->
+    		<option value="1">선택1</option>
+    		<option value="2">선택2</option>
+    		<option value="3">선택3</option>
+    	</select>
+    </body>
+</html>
