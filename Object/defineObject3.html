@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title>  </title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+        
+        <script>
+       		function Person(name, age, eyeColor) {
+				this.name = name;
+				this.age = age;
+				this.eyeColor = eyeColor;
+				this.getEyeColor = function()
+				{
+					return this.eyeColor;
+				};
+			}
+       		
+       		var people1 = new Person("홍길동", 40, "blue");
+       		document.write(people1.name, "/", people1.age, "<br/>");
+       		document.write(people1.getEyeColor());
+       		
+       		var people2 = new Person("슈퍼맨", 30, "red");
+       		console.log(people1);
+       		console.log(people2);
+        </script>
+    </head>
+    <body>
+	       
+    </body>
+</html>
