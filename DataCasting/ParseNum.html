@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title>숫자 형변환</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+        <script>
+            var str1, str2, str3;
+            str1 = "20kr5";
+            str2 = "20.45";
+            str3 = "10.4e2k";
+
+            result = parseInt(str1) + parseInt(str2); // 문자열을 각각 숫자로 변환 Int이기때문에 소숫점 이하는 잘림
+            
+            document.write("result= " + result + "<br/>") 
+            document.write("parseInt(str2,16) = " + parseInt(str2,16) +"<br/>"); // 16진수로 변환
+            document.write("parseFloat(str3) = " + parseFloat(str3));
+
+        </script>
+    </head>
+    <body>
+	       
+    </body>
+</html>
