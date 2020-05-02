@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>DOM</title>
+	</head>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+		<script>
+			var divGroup;
+			function addText()
+			{
+				divGroup = document.getElementById("divGroup");
+				var divObj = document.createElement("div"); // div태그를 만듬 = <div> </div>
+				var inputObj = document.createElement("input") // input 태그를 만듬 <input>
+				inputObj.setAttribute("type", "text") // input 태그내의 속성중 type속성을 text로 설정
+				inputObj.setAttribute("name", "num") // input 태그 내의 속성 중 name속성을 num으로 설정
+				divObj.appendChild(inputObj) // divObj의 자식으로 inputObj로 설정함.
+				divGroup.appendChild(divObj) // divGroup의 자식으로 divObj를 설정.
+			}
+			function showData() {
+				var arrObj = document.getElementsByName("num");
+				var str = 0;
+				for(idx = 0; idx < arrObj.length; idx++)
+				{
+					str += parseInt(arrObj[idx].value);
+				}
+				document.getElementById("userData").innerHTML= str;
+			}
+		</script>
+	<body>
+		<input type="button" value ="택스트 입력 양식 추가" onclick="addText()">
+		<input type="button" value ="입력 값 보기" onclick="showData()">
+		
+		<div id = "userData"></div>
+		<div id = "divGroup"></div>
+	</body>
+</html>
