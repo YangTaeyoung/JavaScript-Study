@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>CSS 스타일 DOM을 이용하여 바꾸기</title>
+	</head>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+		<script>
+			function changeStyle()
+			{
+				var p1Obj = document.getElementById("p1");
+				p1Obj.style.color = "red";
+				p1Obj.style.backgroundColor = "yellow";
+				p1Obj.style.fontFamily = "Century Schoolbook";
+				p1Obj.style.fontStyle = "italic";
+			}
+		</script>
+	<body>
+	<p id ="p1">This is a paragraph</p>
+	<input type="button" onclick="changeStyle()" value="스타일 바꾸기">		
+	</body>
+</html>
