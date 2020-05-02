@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title></title>
+	</head>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+		<script>
+			function show()
+			{
+				var arr = document.getElementsByName("fav");
+				var str = "";
+				for(var i  in arr)
+				{
+					if(arr[i].checked)
+						str+= arr[i].value + ", ";
+				}
+				alert(str);
+				str="";
+				arr = document.getElementsByName("fruit");
+				for (var i in arr)
+				{
+					if(arr[i].checked)
+					str += arr[i].value;	
+				}
+				alert(str);
+				return false;
+			}
+		</script>
+	<body>
+		<form action="#" onSubmit="return show()">
+			<div>
+				<input type="checkbox" name="fav" value="computer"> 컴퓨터
+				<input type="checkbox" name="fav" value="notebook"> 노트북
+				<input type="checkbox" name="fav" value="smartphone"> 스마트폰
+			</div>
+			<div>
+				<input type="radio" name="fruit" value="apple">사과 
+				<input type="radio" name="fruit" value="orange">귤
+				<input type="radio" name="fruit" value="pear">배 
+			</div>
+			<div>
+				<input type="submit" value="입력 값 출력">
+			</div>
+		</form>	
+	</body>
+</html>
