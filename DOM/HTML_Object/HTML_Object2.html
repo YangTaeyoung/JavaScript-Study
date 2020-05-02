@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title></title>
+	</head>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+		<script>
+			function add() {
+				var optionObj = document.createElement("option");
+				optionObj.setAttribute("value", "myFruit");
+				var t = document.createTextNode(document.getElementById("fruit").value);
+				optionObj.appendChild(t);
+				document.getElementById("mySelect").appendChild(optionObj);
+			}
+		</script>
+	<body>
+		<select size="6" id="mySelect">
+			<option value="apple"> 사과 </option>
+		</select>
+		<form>
+			<input type ="text" id="fruit">
+			<button type="button" onclick="add()">추가</button>
+		</form>
+	</body>
+</html>
