@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title> HTML Object </title>
+	</head>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+		
+		<script>
+			function show()
+			{
+				var obj = document.getElementById("car");
+				document.getElementById("result").innerHTML = obj.value +", " + obj.selectedIndex;
+			}
+		</script>
+		
+	<body>
+		<form>
+			<select name="car" id ="car">
+				<option value ="현대">현대자동차</option>
+				<option value ="기아">기아자동차</option>
+				<option value ="벤츠">벤츠</option>
+				<option value ="BMW">BMW</option>
+			</select>
+			<button type="button" onclick="show()"> 선택 값</button>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<p> 선택된 값: <span id="result"></span></p>
+		</form>		
+	</body>
+</html>
