@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>DOM 테스트 Node와 Element</title>
+	</head>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+		<script>
+			
+		</script>
+	<body>
+	<div id="myid">
+		<p>sub p1</p>
+		<p id="middle">sub p2</p>
+		<p>sub p3</p>
+	</div>
+	<script>
+		var arr1 = document.getElementById("myid").children;
+		console.log(arr1);
+		var arr2 = document.getElementById("myid").childNodes;
+		console.log(arr2);
+		console.log(document.getElementById("myid").firstChild);
+		console.log(document.getElementById("myid").lastElementChild);
+		console.log(document.getElementById("middle").previousSibling);
+		console.log(document.getElementById("middle").previousElementSibling);
+	</script>
+		
+	</body>
+</html>
