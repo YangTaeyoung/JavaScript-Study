@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Location 객체</title><!-- 현재 URL에 대한 정보를 가지고 있는 객체 -->
+	</head>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+		<script>
+			function nextPage()
+			{
+				location.href = "http://www.w3schools.com";
+			}
+		</script>
+	<body>
+		<input type="button" value ="2초 뒤 다음 페이지" onclick="window.setTimeout('nextPage()', '2000')"><br/>
+		<script>
+			document.write("href = ", location.href, "<br/>");
+			document.write("hostname = ", location.hostname, "<br/>");
+			document.write("host = ", location.host, "<br/>");
+			document.write("port = ", location.port, "<br/>");
+		</script>
+		
+		
+	</body>
+</html>
