@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Screen</title> <!-- 접속한 사용자 모니터의 해상도나, 크기에 관한 정보를 갖고 있음. -->
+	</head>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+		<script>
+			function maxopen(url, winattribute)
+			{
+				var maxwindow = window.open(url, "", winattribute);
+				maxwindow.moveTo(0,0);
+				maxwindow.resizeTo(screen.availWidth, screen.availHeight);
+			}
+		</script>
+	<body>
+		<p>
+			<a href="#" onclick="maxopen('http://www.google.com', 'resize=1'. scrollbars=1, status=1)">
+				전체 화면 보기
+			</a>
+		</p>
+		<script>
+			document.write("screen.height: ", window.screen.height, "<br/>");
+			document.write("screen.width: ", window.screen.width, "<br/>");
+			document.write("screen.availHeight: ", window.screen.availHeight, "<br/>");
+			document.write("screen.availWidth: ", window.screen.availWidth, "<br/>");
+			document.write("screen.colorDepth: ", window.screen.colorDepth, "<br/>");
+			document.write("screen.pixelDepth: ", window.screen.pixelDepth, "<br/>");
+		</script>
+	</body>
+</html>
