@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>setInterval을 사용해보기</title>
+	</head>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+		<script>
+			var pid;
+			function showTime()
+			{
+				var today = new Date();
+				h = today.getHours();
+				m = today.getMinutes();
+				s = today.getSeconds();
+				obj = document.getElementById("time");
+				obj.innerHTML = h + ":" + m + ":" + s;
+			}
+			function startTime()
+			{
+				pid = window.setInterval("showTime()", 1000); // 함수 호출 간격을 1초로 설정
+			}
+			function stopTime()
+			{
+				window.clearInterval(pid);
+			}
+		</script>
+	<body>
+		<input type="button" onclick="startTime()" value ="시작">
+		<input type="button" onclick="stopTime()" value ="중지">
+		<div id = "time"></div>
+	</body>
+</html>
