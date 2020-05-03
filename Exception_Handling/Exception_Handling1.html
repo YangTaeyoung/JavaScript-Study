@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>예외처리</title>
+	<!-- 실행시간 오류가 발생되었을 때의 예외를 제어 -->
+	</head>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+		<script>
+			try
+			{
+				var str = document.getElementById("demo").innerHTML;
+			}
+			catch(err)
+			{
+				alert(err.message);
+			}
+		</script>
+	<body>
+		<p id="demo">DOM객체는 문서가 로드 된 뒤 사용되어야 함.</p>
+	</body>
+</html>
