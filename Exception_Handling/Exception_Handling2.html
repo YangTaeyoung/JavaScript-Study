@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>예외처리2</title>
+	</head>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+		<script>
+			function myFunction() {
+				var message = document.getElementById("message");
+				message.innerHTML = "";
+				var x = document.getElementById("demo").value;
+				
+				try{
+					if(x=="") throw "empty";
+					if(isNaN(x)) throw "숫자 아님";
+					x = Number(x); // String 타입 x를  숫자로 변환
+					if(x < 5) throw "입력값이 5보다 작음";
+					if (x > 10) throw "입력값이 10보다 큼";
+					
+				}
+				catch(err)
+				{
+					message.innerHTML = err;	
+				}
+			}
+		</script>
+	<body>
+		<p>
+			5~10사이의 숫자 입력: <input id ="demo" type="text" size="3">
+		</p>
+		<button type="button" onclick="myFunction()">Test Input</button>
+		<p id="message"></p>
+	</body>
+</html>
