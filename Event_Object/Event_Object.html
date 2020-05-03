@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title></title>
+	</head>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+		<script>
+			window.onload = function () {
+				var eventObj;
+				document.onmousemove = function (e) {
+					eventObj = e?e:window.event;
+					var cx = eventObj.clientX;
+					var cy = eventObj.clientY;
+					
+					document.getElementById("client_x").value = cx;
+					document.getElementById("client_y").value = cy;
+					
+					var px = eventObj.pageX;
+					var py = eventObj.pageY;
+					
+					document.getElementById("pg_x").value = px;
+					document.getElementById("pg_y").value = py;
+				};
+				document.getElementById("key").onkeydown = function(e) {
+					eventObj = e?e:window.event;
+					document.getElementById("code").value = eventObj.keyCode;
+				};
+			}
+			
+		</script>
+	<body>
+	<fieldset>
+		<legend> 커서 위치 추적</legend>
+		<p>
+			<label for="client_x">clientX: </label>
+			<input type="text" name="client_x" id="client_x">
+			<label for="pg_x">pageX: </label>
+			<input type="text" name="pg_x" id="pg_x">
+		</p>
+		<p>
+			<label for="client_y">clientY: </label>
+			<input type="text" name="client_y" id="client_y">
+			<label for="pg_y">pageX: </label>
+			<input type="text" name="pg_y" id="pg_y">
+		</p>
+	</fieldset>
+	<fieldset>
+		<legend>키 코드 값</legend>
+		<label for="key">입력키보드 : </label>
+		<input type="text" name="key" id="key">
+		<label for="code">유니코드 값 : </label>
+		<input type="text" name="code" id="code">
+	</fieldset>
+		
+	</body>
+</html>
