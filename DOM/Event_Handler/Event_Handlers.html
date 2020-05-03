@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>DOM Event Handler</title>
+	</head>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+		<script>
+			window.onload = function()
+			{
+				var imgObj = document.getElementById("myImg");
+				imgObj.onmouseover = function()
+				{
+					imgObj.src = "images/button2.png";
+					document.getElementById("title").innerHTML = "마우스 오버";
+					document.getElementById("img_src").innerHTML = imgObj.src;
+				}
+				imgObj.onmouseout = function()
+				{
+					imgObj.src = "images/button1.png";
+					document.getElementById("title").innerHTML = "마우스 아웃";
+					document.getElementById("img_src").innerHTML = imgObj.src;
+				}
+			}
+		</script>
+	<body>
+		<h1 id="title">마우스 아웃</h1>
+		<img alt="이미지를 불러오는 것에 실패했음" src="images/button1.png" id = myImg>
+		<p id="img_src"></p>
+	</body>
+</html>
