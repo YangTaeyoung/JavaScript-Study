@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>DOM Collection</title>
+	</head>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+		<script>
+			function change() 
+			{
+				document.images[0].src = "images/orange.jpg"; // 첫번째 img태그속 사진이 오렌지로 바뀐다.
+			}
+			function showSrc() 
+			{
+				var arrObj = document.images;
+				var sourceObj = document.getElementById("source")
+				for(var i=0; i<arrObj.length;i++)
+				{
+					sourceObj.innerHTML += arrObj[i].src+ "<br/>";	
+				}
+			}
+		</script>
+	<body>
+		<img alt="불러오는 것에 실패했음1" width="128" height="128" src="images/kiwi.jpg">
+		<img alt="불러오는 것에 실패했음2" width="128" height="128" src="images/smile.png" onclick="change()">
+		<p>
+			<button type="button" onclick="showSrc()">이미지 경로 보기</button>
+		</p>
+		<div id="source"></div>
+	</body>
+</html>
